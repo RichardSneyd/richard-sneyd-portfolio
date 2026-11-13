@@ -22,7 +22,7 @@
     <div class="wrap">
       <nav aria-label="Main"><a class="brand" href="#top">Richard <span>Sneyd</span></a>
         <div class="nav-tools">
-          <div class="nav-links"><a href="#work">Case studies</a><a href="#teaching">Teaching samples</a><a
+          <div class="nav-links" id="nav-links"><a href="#work">Case studies</a><a href="#teaching">Teaching samples</a><a
               href="#published">Published work</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
           </div><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme"
             aria-pressed="true"><svg data-theme-icon="sun" aria-hidden="true" focusable="false" viewBox="0 0 24 24"
@@ -35,6 +35,17 @@
               stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" hidden>
               <path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"></path>
             </svg></button>
+          <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation menu"
+            aria-controls="nav-links" aria-expanded="false">
+            <svg data-menu-icon="open" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <svg data-menu-icon="close" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.8" stroke-linecap="round" hidden>
+              <path d="m6 6 12 12M18 6 6 18"></path>
+            </svg>
+          </button>
         </div>
       </nav>
     </div>

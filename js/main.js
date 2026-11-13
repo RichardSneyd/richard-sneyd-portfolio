@@ -1,3 +1,37 @@
+const menuToggle = document.querySelector("#menu-toggle");
+const navLinks = document.querySelector("#nav-links");
+const menuOpenIcon = menuToggle.querySelector('[data-menu-icon="open"]');
+const menuCloseIcon = menuToggle.querySelector('[data-menu-icon="close"]');
+
+function setMenuOpen(isOpen) {
+  navLinks.classList.toggle("is-open", isOpen);
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.setAttribute("aria-label", `${isOpen ? "Close" : "Open"} navigation menu`);
+  menuOpenIcon.toggleAttribute("hidden", isOpen);
+  menuCloseIcon.toggleAttribute("hidden", !isOpen);
+}
+
+menuToggle.addEventListener("click", () => {
+  setMenuOpen(menuToggle.getAttribute("aria-expanded") !== "true");
+});
+
+navLinks.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => setMenuOpen(false));
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") {
+    setMenuOpen(false);
+    menuToggle.focus();
+  }
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 760 && menuToggle.getAttribute("aria-expanded") === "true") {
+    setMenuOpen(false);
+  }
+});
+
 const themeToggle = document.querySelector("#theme-toggle");
 const sunIcon = themeToggle.querySelector('[data-theme-icon="sun"]');
 const moonIcon = themeToggle.querySelector('[data-theme-icon="moon"]');
