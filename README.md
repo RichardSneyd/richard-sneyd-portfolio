@@ -21,7 +21,6 @@ Then open http://localhost:8000. (Opening `index.html` directly also works.)
 ## Edit
 
 - **Text:** edit `index.html`. Sections are marked with comments.
-- **Placeholders:** the yellow dashed boxes (`class="todo"`) mark content still to be added. Find them all with `grep -n 'class="todo"' index.html`, and delete the whole `<p>` once replaced.
 - **Colours:** change the variables in the first block of `css/styles.css`. Dark mode values are in the same block.
 - **Project images:** put screenshots and other project images in `images/projects/`, then reference them from `index.html` with descriptive `alt` text and `loading="lazy"`. Compress large images first (under 300 KB each is a good target).
 

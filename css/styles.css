@@ -252,16 +252,6 @@ h2 {
   margin: 0 0 12px;
 }
 
-.todo {
-  background: var(--mark);
-  border: 1px dashed var(--muted);
-  border-radius: 6px;
-  padding: 8px 12px;
-  font-size: 15px;
-  line-height: 1.45;
-  margin: 0 0 12px;
-}
-
 .teaching-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
