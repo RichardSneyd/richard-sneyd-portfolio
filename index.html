@@ -12,11 +12,15 @@
 <script src="js/main.js" defer></script>
 </head>
 <body>
+<header class="site-header">
 <div class="wrap">
-<nav aria-label="Main"><b>Richard Sneyd</b><a href="#work">Case studies</a><a href="#published">Published work</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+<nav aria-label="Main"><a class="brand" href="#top">Richard <span>Sneyd</span></a><div class="nav-links"><a href="#work">Case studies</a><a href="#teaching">Teaching samples</a><a href="#published">Published work</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div></nav>
+</div>
+</header>
 
+<div class="wrap">
 <!-- Hero -->
-<header class="hero">
+<header class="hero" id="top">
 <div>
 <h1>I teach engineers, and I build the tools that help them learn.</h1>
 <p class="lede">Developer educator and learning engineer with 15+ years across full-stack development, curriculum design and technical writing. Former Head of Engineering and CTO in EdTech; author, trainer and course creator.</p>
@@ -64,6 +68,34 @@ const richard = {
 <h4>BrightCode screenshots</h4>
 <figure><button class="screenshot-button" type="button"><img src="images/projects/bright-code-1.PNG" alt="BrightCode dashboard with a submissions-by-week chart and recent cohorts" width="1580" height="741" loading="lazy" decoding="async"></button><figcaption>The instructor dashboard shows submission activity and active cohorts.</figcaption></figure>
 <figure><button class="screenshot-button" type="button"><img src="images/projects/bright-code-2.PNG" alt="BrightCode coding exercise with instructions, test cases and a JavaScript editor" width="1576" height="739" loading="lazy" decoding="async"></button><figcaption>A learner works through a coding exercise in the practice platform.</figcaption></figure>
+</div>
+</details>
+
+<details>
+<summary><span class="case-icon" aria-hidden="true">🎓</span><span class="case-title">Stencyl exams: building a Moodle learning and certification platform</span></summary>
+<div class="body">
+<div><h4>Context</h4><p>The Stencyl exam and certification programme needed a learning platform that could prepare candidates for its assessments and support certification.</p>
+<h4>What I did</h4><p>Built the platform end to end: manually set up Moodle, designed the learning experience and course materials, and modified PHP code in custom plugins to enable PDF certificate generation.</p></div>
+<div><h4>Outcome</h4><p>Delivered a complete Moodle courseware site for the Stencyl exam programme, with structured learning modules and PDF certificates for successful candidates.</p>
+<ul class="tags"><li>Moodle</li><li>PHP</li><li>Technical writing</li><li>Instructional design</li><li>Plugin customization</li><li>PDF certificates</li></ul></div>
+</div>
+<div class="case-gallery">
+<h4>Stencyl exam courseware</h4>
+<figure><button class="screenshot-button" type="button"><img src="images/projects/stencyl-exam-moodle.jpg" alt="Moodle courseware homepage listing Stencyl exam preparation modules and certification pathways" width="1421" height="804" loading="lazy" decoding="async"></button><figcaption>The Moodle homepage organizes course modules for Stencyl exam preparation and certification.</figcaption></figure>
+</div>
+</details>
+
+<details>
+<summary><span class="case-icon" aria-hidden="true">✍️</span><span class="case-title">High-school Game Design courses: instructional design and technical writing</span></summary>
+<div class="body">
+<div><h4>Context</h4><p>A high-school programme needed expert-written content for two Game Design courses.</p>
+<h4>What I did</h4><p>Contributed subject-matter expertise and wrote content for both courses, working with the client across a five-month contract.</p></div>
+<div><h4>Outcome</h4><p>The Upwork contract records 298 hours of work from May to October 2017. The client gave the project a five-star review, praising my subject knowledge, professionalism and reliability.</p>
+<ul class="tags"><li>Instructional design</li><li>Technical writing</li><li>Game design</li><li>High-school curriculum</li></ul></div>
+</div>
+<div class="case-gallery">
+<h4>Contract and client feedback</h4>
+<figure><button class="screenshot-button" type="button"><img src="images/projects/upwork-game-design-course-instructional-design-and-technical-writing.jpg" alt="Redacted Upwork contract record for two high-school Game Design courses, showing 298 hours, dates and a five-star client review" width="1531" height="704" loading="lazy" decoding="async"></button><figcaption>The redacted Upwork record documents the contract scope, 298 hours and five-star client feedback.</figcaption></figure>
 </div>
 </details>
 
@@ -116,9 +148,37 @@ const richard = {
 </div>
 </details>
 
-<div class="card mt-lg"><h3>Live examples</h3>
-<p class="meta">The strongest proof that you can teach and code</p>
-<p class="todo">[Add: a tutorial you wrote, a teaching repo, and a short recorded live-coding session. Link each here with one line on the audience and goal.]</p></div>
+</section>
+
+<!-- Teaching samples -->
+<section id="teaching">
+<h2>Teaching samples</h2>
+<p class="sub">Practical, project-based courses that help learners build skills by making things. These selected Udemy courses span web development, game development and creative tools.</p>
+<div class="teaching-grid">
+<article class="card teaching-card">
+<h3><span class="work-icon" aria-hidden="true">🌐</span>Web development</h3>
+<a class="teaching-feature" href="https://www.udemy.com/course/learn-html5-css-and-javascript-basics-from-scratch-build-websites-apps/" target="_blank" rel="noopener noreferrer"><img src="images/projects/html5-course-screenshot.png" alt="HTML5 course preview showing the HTML5 logo in the Udemy player" width="1599" height="899" loading="lazy" decoding="async"><span>Learn HTML5, CSS and JavaScript Basics from Scratch</span></a>
+<p>Start from the fundamentals and build websites, web apps and games with HTML5, CSS and JavaScript.</p>
+</article>
+<article class="card teaching-card">
+<h3><span class="work-icon" aria-hidden="true">🎮</span>Game development</h3>
+<ul class="teaching-list">
+<li><a class="teaching-course" href="https://www.udemy.com/course/learn-easy-2d-html5-game-development-in-construct-2/" target="_blank" rel="noopener noreferrer"><img class="course-thumb" src="images/projects/learn-easy-html5-game-development-in-construct-2.webp" alt="" width="480" height="270" loading="lazy" decoding="async"><span>Learn Easy HTML5 Game Development in Construct 2</span></a></li>
+<li><a class="teaching-course" href="https://www.udemy.com/course/develop-a-vertical-shootem-up-game-for-android-and-ios-stencyl-free/" target="_blank" rel="noopener noreferrer"><img class="course-thumb" src="images/projects/vertical-shooter-in-stencyl-course-cover.webp" alt="" width="480" height="270" loading="lazy" decoding="async"><span>Develop a Vertical Shoot’em Up Game for Android and iOS</span></a></li>
+<li><a class="teaching-course" href="https://www.udemy.com/course/learn-3d-game-development-and-programming-with-unity/" target="_blank" rel="noopener noreferrer"><img class="course-thumb" src="images/projects/learn-3d-game-development-and-programming-with-unity.webp" alt="" width="480" height="270" loading="lazy" decoding="async"><span>Learn 3D Game Development and Programming with Unity</span></a></li>
+<li><a class="teaching-course" href="https://www.udemy.com/course/advanced-cross-platform-computer-game-development-design-with-stencyl/" target="_blank" rel="noopener noreferrer"><img class="course-thumb" src="images/projects/develop-mobile-games-for-android-and-ios-with-stencyl-cover.webp" alt="" width="480" height="270" loading="lazy" decoding="async"><span>Develop Mobile Games for Android and iOS with Stencyl</span></a></li>
+<li><a class="teaching-course" href="https://www.udemy.com/course/create-your-first-computer-game-with-stencyl/" target="_blank" rel="noopener noreferrer"><img class="course-thumb" src="images/projects/create-your-first-computer-game-with-stencyl.webp" alt="" width="480" height="270" loading="lazy" decoding="async"><span>Create your First Computer Game with Stencyl</span></a></li>
+</ul>
+</article>
+<article class="card teaching-card">
+<h3><span class="work-icon" aria-hidden="true">🎨</span>Creative tools</h3>
+<ul class="teaching-list">
+<li><a class="teaching-course" href="https://www.udemy.com/course/learn-3d-modelling-animation-from-scratch-with-blender-3d/" target="_blank" rel="noopener noreferrer"><img class="course-thumb" src="images/projects/learn-3d-modelling-and-animatoin-from-scratch-in-blender-cover.webp" alt="" width="480" height="270" loading="lazy" decoding="async"><span>Learn 3D Modelling &amp; Animation from Scratch with Blender 3D</span></a></li>
+<li><a class="teaching-course" href="https://www.udemy.com/course/learn-adobe-photoshop-cs6-from-scratch-in-just-3-hours-zero-to-hero/" target="_blank" rel="noopener noreferrer"><img class="course-thumb" src="images/projects/learn-photoshop-basics-from-scratch-cover.webp" alt="" width="480" height="270" loading="lazy" decoding="async"><span>Learn Adobe Photoshop CC and CS6 Basics from Scratch</span></a></li>
+</ul>
+</article>
+</div>
+<p class="teaching-more"><a class="btn" href="https://www.udemy.com/user/richardsneyd/" target="_blank" rel="noopener noreferrer">View all courses on Udemy</a></p>
 </section>
 
 <!-- Published work -->
@@ -127,7 +187,6 @@ const richard = {
 <p class="sub">Public, verifiable material I created.</p>
 <div class="grid">
 <div class="card"><a class="published-media book-preview" href="https://www.packtpub.com/en-us/product/stencyl-essentials-9781784390471" target="_blank" rel="noopener noreferrer"><img src="images/projects/stencyl essentials.jpg" alt="Cover of Stencyl Essentials by Richard Sneyd" width="378" height="466" loading="lazy" decoding="async"></a><h3><a href="https://www.packtpub.com/en-us/product/stencyl-essentials-9781784390471" target="_blank" rel="noopener noreferrer">Stencyl Essentials</a></h3><p class="meta">Book · Packt Publishing</p><p>A beginner-friendly guide to building games, breaking complex logic and software architecture into approachable chapters.</p></div>
-<div class="card"><figure class="published-media course-preview"><a class="published-image-link" href="https://www.udemy.com/course/learn-html5-css-and-javascript-basics-from-scratch-build-websites-apps/" target="_blank" rel="noopener noreferrer"><img src="images/projects/html5-course-screenshot.png" alt="Udemy course preview showing the HTML5 logo" width="1599" height="899" loading="lazy" decoding="async"></a><figcaption><a href="https://www.udemy.com/course/learn-html5-css-and-javascript-basics-from-scratch-build-websites-apps/" target="_blank" rel="noopener noreferrer">View course on Udemy</a></figcaption></figure><h3><a href="https://www.udemy.com/course/learn-html5-css-and-javascript-basics-from-scratch-build-websites-apps/" target="_blank" rel="noopener noreferrer">Learn HTML5, CSS and JavaScript Basics</a></h3><p class="meta">Udemy course</p><p>A beginner-friendly introduction to building websites and apps with HTML, CSS and JavaScript. Also available: courses on Pluralsight and Digital Tutors.</p></div>
 <div class="card"><div class="published-media brand-preview"><img src="images/brainybots-logo-512.png" alt="BrainyBots logo" width="512" height="512" loading="lazy" decoding="async"></div><h3>BrainyBots</h3><p class="meta">Independent studio · 2023 to present</p><p>Accessible cognitive-training apps, designed, built, tested and supported end to end.</p></div>
 <div class="card"><figure class="published-media listenup-preview"><a class="published-image-link" href="https://github.com/RichardSneyd/auditory-trainer" target="_blank" rel="noopener noreferrer"><img src="images/listen-up-screenshot.png" alt="Listen Up auditory trainer interface with music selection, playback controls and advanced settings" width="1583" height="722" loading="lazy" decoding="async"></a><figcaption><a href="https://github.com/RichardSneyd/auditory-trainer" target="_blank" rel="noopener noreferrer">Explore the open-source project on GitHub</a></figcaption></figure><h3><a href="https://github.com/RichardSneyd/auditory-trainer" target="_blank" rel="noopener noreferrer">Listen Up</a></h3><p class="meta">Open source · Auditory training</p><p>A free auditory trainer for sound stimulation and listening practice.</p></div>
 </div>
