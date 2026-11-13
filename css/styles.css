@@ -1,40 +1,8 @@
 /* Richard Sneyd portfolio styles. Edit colours in the design tokens block. */
 
-/* Design tokens (colours, light and dark) */
+/* Design tokens (forced dark theme) */
 :root {
-  --bg: #f4f6f5;
-  --surface: #fff;
-  --ink: #16211f;
-  --muted: #55645f;
-  --line: #d5dcd9;
-  --accent: #0b6b63;
-  --accent-ink: #fff;
-  --mark: #fff1b8;
-  --code: #12201e;
-  --code-ink: #d9efe9;
-  --code-dim: #7fa39b;
-  box-sizing: border-box;
-  padding-top: env(safe-area-inset-top,0px);
-  padding-bottom: env(safe-area-inset-bottom,0px);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0f1716;
-    --surface: #16211f;
-    --ink: #e8f0ee;
-    --muted: #9bb0aa;
-    --line: #2b3a37;
-    --accent: #4fc3b6;
-    --accent-ink: #06201d;
-    --mark: #4a3f12;
-    --code: #0a1211;
-    --code-ink: #d9efe9;
-    --code-dim: #6f948c;
-  }
-}
-
-:root[data-theme="dark"] {
+  color-scheme: dark;
   --bg: #0f1716;
   --surface: #16211f;
   --ink: #e8f0ee;
@@ -46,6 +14,24 @@
   --code: #0a1211;
   --code-ink: #d9efe9;
   --code-dim: #6f948c;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top,0px);
+  padding-bottom: env(safe-area-inset-bottom,0px);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f4f6f5;
+  --surface: #fff;
+  --ink: #16211f;
+  --muted: #55645f;
+  --line: #d5dcd9;
+  --accent: #0b6b63;
+  --accent-ink: #fff;
+  --mark: #fff1b8;
+  --code: #12201e;
+  --code-ink: #d9efe9;
+  --code-dim: #7fa39b;
 }
 
 /* Base */
@@ -122,6 +108,41 @@ nav {
   display: flex;
   align-items: center;
   gap: 22px;
+}
+
+.nav-tools {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.theme-toggle {
+  flex: 0 0 auto;
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0;
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+.theme-toggle svg[hidden] {
+  display: none;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 nav a {
@@ -671,8 +692,14 @@ footer {
   .brand {
     font-size: 20px;
   }
-  .nav-links {
+  .nav-tools {
     width: 100%;
+    gap: 10px;
+  }
+  .nav-links {
+    flex: 1;
+    width: auto;
+    min-width: 0;
     gap: 8px;
     overflow-x: auto;
     padding: 2px 0 6px;
