@@ -441,6 +441,37 @@ details[open] summary::after {
   line-height: 1.4;
 }
 
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(min(100%,280px),1fr));
+  gap: 20px;
+}
+
+.testimonial-card {
+  min-width: 0;
+  margin: 0;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.testimonial-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.testimonial-card figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-family: "Bricolage Grotesque",sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
 .published-media {
   display: flex;
   height: 240px;
