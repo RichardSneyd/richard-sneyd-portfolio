@@ -1,0 +1,369 @@
+/* Richard Sneyd portfolio styles. Edit colours in the design tokens block. */
+
+/* Design tokens (colours, light and dark) */
+:root {
+  --bg: #f4f6f5;
+  --surface: #fff;
+  --ink: #16211f;
+  --muted: #55645f;
+  --line: #d5dcd9;
+  --accent: #0b6b63;
+  --accent-ink: #fff;
+  --mark: #fff1b8;
+  --code: #12201e;
+  --code-ink: #d9efe9;
+  --code-dim: #7fa39b;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top,0px);
+  padding-bottom: env(safe-area-inset-bottom,0px);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1716;
+    --surface: #16211f;
+    --ink: #e8f0ee;
+    --muted: #9bb0aa;
+    --line: #2b3a37;
+    --accent: #4fc3b6;
+    --accent-ink: #06201d;
+    --mark: #4a3f12;
+    --code: #0a1211;
+    --code-ink: #d9efe9;
+    --code-dim: #6f948c;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #0f1716;
+  --surface: #16211f;
+  --ink: #e8f0ee;
+  --muted: #9bb0aa;
+  --line: #2b3a37;
+  --accent: #4fc3b6;
+  --accent-ink: #06201d;
+  --mark: #4a3f12;
+  --code: #0a1211;
+  --code-ink: #d9efe9;
+  --code-dim: #6f948c;
+}
+
+/* Base */
+html {
+  scroll-padding-top: env(safe-area-inset-top,0px);
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 18px/1.65 "Source Serif 4",Georgia,serif;
+}
+
+h1,h2,h3,.sans {
+  font-family: "Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:focus-visible,button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Navigation and hero */
+nav {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  padding: 20px 0;
+  font-family: "Bricolage Grotesque",sans-serif;
+  font-size: 16px;
+  flex-wrap: wrap;
+}
+
+nav b {
+  margin-right: auto;
+  font-size: 18px;
+}
+
+nav a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 48px;
+  align-items: center;
+  padding: 48px 0 40px;
+}
+
+h1 {
+  font-size: clamp(38px,6vw,64px);
+  line-height: 1.04;
+  margin: 0 0 20px;
+  letter-spacing: -.02em;
+}
+
+.lede {
+  font-size: 21px;
+  max-width: 34em;
+  color: var(--muted);
+  margin: 0 0 28px;
+}
+
+.btns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-family: "Bricolage Grotesque",sans-serif;
+  font-weight: 500;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 2px solid var(--accent);
+}
+
+.btn.p {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.photo {
+  width: 100%;
+  max-width: 340px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50% 50% 50% 8px;
+  justify-self: center;
+  border: 6px solid var(--surface);
+}
+
+pre {
+  background: var(--code);
+  color: var(--code-ink);
+  padding: 24px 28px;
+  border-radius: 10px;
+  overflow-x: auto;
+  font: 15px/1.7 ui-monospace,Menlo,Consolas,monospace;
+  margin: 0 0 24px;
+  max-width: 100%;
+}
+
+pre i {
+  color: var(--code-dim);
+  font-style: normal;
+}
+
+/* Sections and cards */
+section {
+  padding: 56px 0;
+  border-top: 1px solid var(--line);
+}
+
+h2 {
+  font-size: 34px;
+  margin: 0 0 8px;
+  letter-spacing: -.01em;
+}
+
+.sub {
+  color: var(--muted);
+  margin: 0 0 32px;
+  max-width: 40em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 26px;
+}
+
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 22px;
+}
+
+.meta {
+  font-family: "Bricolage Grotesque",sans-serif;
+  font-size: 15px;
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+
+.card p {
+  margin: 0 0 12px;
+}
+
+.todo {
+  background: var(--mark);
+  border: 1px dashed var(--muted);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 15px;
+  line-height: 1.45;
+  margin: 0 0 12px;
+}
+
+/* Case studies */
+details {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+summary {
+  cursor: pointer;
+  padding: 22px 26px;
+  list-style: none;
+  font-family: "Bricolage Grotesque",sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: "+";
+  font-weight: 500;
+  color: var(--accent);
+}
+
+details[open] summary::after {
+  content: "–";
+}
+
+.body {
+  padding: 0 26px 22px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 8px 28px;
+}
+
+.body h4 {
+  font-family: "Bricolage Grotesque",sans-serif;
+  margin: 12px 0 4px;
+  font-size: 16px;
+}
+
+.body p {
+  margin: 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 0;
+  list-style: none;
+}
+
+.tags li {
+  font-family: "Bricolage Grotesque",sans-serif;
+  font-size: 14px;
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  padding: 3px 12px;
+  background: var(--bg);
+}
+
+/* Timeline and footer */
+.tl {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tl li {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.tl .d {
+  font-family: "Bricolage Grotesque",sans-serif;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.tl strong {
+  font-family: "Bricolage Grotesque",sans-serif;
+}
+
+.note {
+  border-left: 4px solid var(--accent);
+  padding: 4px 0 4px 18px;
+  max-width: 42em;
+  color: var(--muted);
+}
+
+footer {
+  padding: 40px 0 56px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* Responsive */
+@media (max-width: 760px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .photo {
+    max-width: 240px;
+    justify-self: start;
+  }
+  .tl li {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Utilities */
+.mt-md { margin-top: 24px; }
+.mt-lg { margin-top: 32px; }
