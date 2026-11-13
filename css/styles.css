@@ -213,6 +213,10 @@ h2 {
   font-size: 22px;
 }
 
+.work-icon {
+  margin-right: 10px;
+}
+
 .meta {
   font-family: "Bricolage Grotesque",sans-serif;
   font-size: 15px;
@@ -256,6 +260,16 @@ summary {
 
 summary::-webkit-details-marker {
   display: none;
+}
+
+.case-icon {
+  flex: 0 0 1.4em;
+  text-align: center;
+  font-size: .9em;
+}
+
+.case-title {
+  flex: 1;
 }
 
 summary::after {
@@ -335,6 +349,85 @@ details[open] summary::after {
   font-family: "Bricolage Grotesque",sans-serif;
   font-size: 14px;
   line-height: 1.4;
+}
+
+.published-media {
+  display: flex;
+  height: 240px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 18px;
+}
+
+.published-image-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.published-image-link img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.book-preview img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 6px;
+}
+
+.course-preview,
+.listenup-preview {
+  flex-direction: column;
+}
+
+.course-preview .published-image-link,
+.listenup-preview .published-image-link {
+  flex: 1;
+  min-height: 0;
+}
+
+.course-preview img {
+  width: 100%;
+  border: 1px solid var(--line);
+}
+
+.published-media figcaption {
+  margin-top: 6px;
+  color: var(--muted);
+  font-family: "Bricolage Grotesque",sans-serif;
+  font-size: 13px;
+}
+
+.published-media figcaption a {
+  color: inherit;
+}
+
+.brand-preview img {
+  width: auto;
+  height: 100%;
+}
+
+.listenup-preview img {
+  width: 100%;
+}
+
+.card h3 a {
+  color: inherit;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.card h3 a:hover {
+  color: var(--accent);
 }
 
 .image-viewer {
